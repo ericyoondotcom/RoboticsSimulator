@@ -47,12 +47,12 @@ public class OculusGrab : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") > 0.2f && inRadius.Count > 0)
+        if ((Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") > 0.2f || Input.GetMouseButton(0)) && inRadius.Count > 0)
         {
             GrabObject();
         }
 
-        if (Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") < 0.2f && inRadius.Count > 0)
+        if ((Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") < 0.2f && !Input.GetMouseButton(0)) && inRadius.Count > 0)
         {
             ReleaseObject();
         }
