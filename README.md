@@ -1,5 +1,5 @@
-# VEXSimulator
-A driving simulator for VEX Tower Takeover.
+# Robot Simulator
+A driving simulator for the VEX Robotics Tower Takeover competition.
 
 ## Simple Installation
 1. Make sure you have Android Studio downloaded (including the `adb` CLI tool).
