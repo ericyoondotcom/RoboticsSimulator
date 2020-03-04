@@ -13,6 +13,8 @@ public class Grabbable : MonoBehaviour
     [System.NonSerialized]
     public OculusGrab grabber;
 
+    public float throwVelocityScale = 1;
+
     Dictionary<Side, bool> isClosest;
     Rigidbody rb;
 
@@ -67,7 +69,7 @@ public class Grabbable : MonoBehaviour
     {
         this.grabber = null;
         rb.isKinematic = false;
-        rb.velocity = transform.TransformDirection(OVRInput.GetLocalControllerVelocity(grabber.) * speed; //TODO: Fill in OVRGrabber variable of OculusGrab script, use its controller var here
+        rb.velocity = transform.TransformDirection(OVRInput.GetLocalControllerVelocity(grabber.controllerHelper.m_controller)) * throwVelocityScale;
     }
 
     public virtual void OnGrabStart() { }

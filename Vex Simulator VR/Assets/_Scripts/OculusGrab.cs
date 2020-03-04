@@ -5,7 +5,7 @@ using System.Linq;
 
 using static Enums;
 // Thanks, https://circuitstream.com/blog/grab-oculus/
-[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Collider), typeof(OVRControllerHelper))]
 public class OculusGrab : MonoBehaviour
 {
 
@@ -19,11 +19,13 @@ public class OculusGrab : MonoBehaviour
 
     Transform oldParent;
 
-    OVRControllerHelper controller;
+    [System.NonSerialized]
+    public OVRControllerHelper controllerHelper;
 
     private void Start()
     {
         inRadius = new List<(Grabbable grabbable, GameObject gameObject)>();
+        controllerHelper = GetComponent<OVRControllerHelper>();
     }
 
     public void OnTriggerEnter(Collider other)
