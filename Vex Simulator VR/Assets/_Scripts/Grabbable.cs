@@ -67,6 +67,7 @@ public class Grabbable : MonoBehaviour
     {
         this.grabber = null;
         rb.isKinematic = false;
+        rb.velocity = transform.TransformDirection(OVRInput.GetLocalControllerVelocity(grabber.) * speed; //TODO: Fill in OVRGrabber variable of OculusGrab script, use its controller var here
     }
 
     public virtual void OnGrabStart() { }

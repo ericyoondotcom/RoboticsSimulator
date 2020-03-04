@@ -19,6 +19,8 @@ public class OculusGrab : MonoBehaviour
 
     Transform oldParent;
 
+    OVRControllerHelper controller;
+
     private void Start()
     {
         inRadius = new List<(Grabbable grabbable, GameObject gameObject)>();
