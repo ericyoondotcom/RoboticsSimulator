@@ -9,4 +9,9 @@ public class Enums : MonoBehaviour
         Left,
         Right
     }
+    public enum Axle
+    {
+        Front,
+        Back
+    }
 }

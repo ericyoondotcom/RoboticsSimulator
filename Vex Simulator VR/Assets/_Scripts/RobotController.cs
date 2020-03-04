@@ -2,32 +2,41 @@
 using System.Collections;
 using System.Collections.Generic;
 
+using static Enums;
+
 public class RobotController : MonoBehaviour
 {
-    public List<AxleInfo> axleInfos;
+    public List<WheelInfo> wheels;
     public float maxMotorTorque;
-    public float maxSteeringAngle;
 
     public void FixedUpdate()
     {
-        float motor = maxMotorTorque * Input.GetAxis("Vertical");
-        float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+        float leftTorque;
+        float rightTorque;
 
-        foreach (AxleInfo axleInfo in axleInfos)
+#if UNITY_EDITOR
+        leftTorque = Input.GetKey(KeyCode.W) ? 1 : (Input.GetKey(KeyCode.S) ? -1 : 0);
+        rightTorque = Input.GetKey(KeyCode.UpArrow) ? 1 : (Input.GetKey(KeyCode.DownArrow) ? -1 : 0);
+#else
+        leftTorque = Input.GetAxis("Oculus_CrossPlatform_PrimaryThumbstickVertical");
+        rightTorque = Input.GetAxis("Oculus_CrossPlatform_SecondaryThumbstickVertical");
+#endif
+
+        leftTorque *= maxMotorTorque;
+        rightTorque *= maxMotorTorque;
+
+        foreach (WheelInfo wheelInfo in wheels)
         {
-            if (axleInfo.motor)
-            {
-                axleInfo.leftWheel.motorTorque = motor;
-                axleInfo.rightWheel.motorTorque = motor;
-            }
+            wheelInfo.wheel.motorTorque = (wheelInfo.side == Side.Left) ? leftTorque : rightTorque;
+            
         }
     }
 }
 
 [System.Serializable]
-public class AxleInfo
+public class WheelInfo
 {
-    public WheelCollider leftWheel;
-    public WheelCollider rightWheel;
-    public bool motor;
+    public WheelCollider wheel;
+    public Side side;
+    public Axle backOrFront;
 }
