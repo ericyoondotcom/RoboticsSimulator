@@ -1,6 +1,10 @@
 # Robot Simulator
 A driving simulator for the VEX Robotics Tower Takeover competition.
 
+## Sidequest Simple Installation
+1. Install Sidequest (free) using a guide like [this one[(https://www.androidcentral.com/how-sideload-apps-oculus-quest).
+2. Use the Sidequest desktop app to install the APK from the [Releases tab](https://github.com/yummypasta/VEXSimulator/releases).
+
 ## Simple Installation
 1. Make sure you have Android Studio downloaded (including the `adb` CLI tool).
 2. Make sure your Quest is in Developer Mode.
