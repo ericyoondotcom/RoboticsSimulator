@@ -57,7 +57,7 @@ public class Grabbable : MonoBehaviour
     public void OnClosestStateChanged(bool closest, Side hand)
     {
         isClosest[hand] = closest;
-        outline.enabled = isClosest[Side.Left] || isClosest[Side.Right];
+        if(outline) outline.enabled = isClosest[Side.Left] || isClosest[Side.Right];
     }
 
     public void InternalOnGrabStart(OculusGrab grabber)

@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1937902244383067213, guid: 3d09498d373be41cfb070312ea327661,
         type: 3}
       propertyPath: m_Name
-      value: vrc_cube
+      value: Purple cube
       objectReference: {fileID: 0}
     - target: {fileID: 3224460828089810526, guid: 3d09498d373be41cfb070312ea327661,
         type: 3}
@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3915153220486717616, guid: 3d09498d373be41cfb070312ea327661,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa9aebd30aa774f33904f930b36f78d9, type: 2}
     - target: {fileID: 7501072289476515875, guid: 3d09498d373be41cfb070312ea327661,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

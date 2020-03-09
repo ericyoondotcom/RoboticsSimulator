@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2747720088568107333}
   - component: {fileID: 8438995523402558908}
   - component: {fileID: 1230968475130587037}
+  - component: {fileID: 9122404478551998545}
   m_Layer: 0
   m_Name: Unprotected Scoring Zone
   m_TagString: Untagged
@@ -92,3 +93,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.049581952, y: 0.04984629, z: 1.4976635}
   m_Center: {x: -0.025209019, y: 0.025076862, z: 0.74822646}
+--- !u!64 &9122404478551998545
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7863711264421665120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 3613567641014311022, guid: a7fd904146b08462c8cc9af4c73718c3, type: 3}
