@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class Claw : MonoBehaviour
 {
     bool closingClaw = false;
-    public HingeJoint leftClaw;
-    public HingeJoint rightClaw;
-    public float clawSpeed;
+    public float clawAnimTime;
+    public Vector3 rotationStart;
+    public Vector3 rotationEnd;
+    public Transform leftClaw;
+    public Transform rightClaw;
+    float t = 0;
+
 
     void Start()
     {
@@ -20,9 +25,11 @@ public class Claw : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             closingClaw = true;
+            t = 0;
         }else if (Input.GetKey(KeyCode.LeftArrow))
         {
             closingClaw = false;
+            t = 0;
         }
 #else
         if (Input.GetAxis("SecondaryIndexTrigger"))
@@ -34,14 +41,18 @@ public class Claw : MonoBehaviour
             closingClaw = false;
         }
 #endif
-        
 
-        var leftMotor = leftClaw.motor;
-        leftMotor.targetVelocity = clawSpeed * (closingClaw ? 1 : -1);
-        leftClaw.motor = leftMotor;
-        var rightMotor = rightClaw.motor;
-        rightMotor.targetVelocity = clawSpeed * (closingClaw ? -1 : 1);
-        rightClaw.motor = rightMotor;
+        if (closingClaw)
+        {
+            leftClaw.localRotation = Quaternion.Lerp(Quaternion.Euler(rotationStart), Quaternion.Euler(rotationEnd), t);
+            rightClaw.localRotation = Quaternion.Lerp(Quaternion.Euler(-rotationStart), Quaternion.Euler(-rotationEnd), t);
+        }
+        else
+        {
+            leftClaw.localRotation = Quaternion.Lerp(Quaternion.Euler(rotationEnd), Quaternion.Euler(rotationStart), t);
+            leftClaw.localRotation = Quaternion.Lerp(Quaternion.Euler(-rotationEnd), Quaternion.Euler(-rotationStart), t);
+        }
+        t += Time.fixedDeltaTime;
         
     }
 }
