@@ -17,6 +17,8 @@ public class OculusGrab : MonoBehaviour
     [System.NonSerialized]
     public Grabbable previousClosest = null;
 
+    public Transform anchor;
+
     Transform oldParent;
 
     [System.NonSerialized]
