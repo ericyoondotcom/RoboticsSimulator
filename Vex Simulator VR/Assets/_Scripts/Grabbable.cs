@@ -69,7 +69,7 @@ public class Grabbable : MonoBehaviour
     {
         this.grabber = null;
         rb.isKinematic = false;
-        rb.velocity = transform.TransformDirection(OVRInput.GetLocalControllerVelocity(grabber.controllerHelper.m_controller)) * throwVelocityScale;
+        rb.velocity = grabber.transform.TransformDirection(OVRInput.GetLocalControllerVelocity(grabber.controllerHelper.m_controller)) * throwVelocityScale;
     }
 
     public virtual void OnGrabStart() { }
