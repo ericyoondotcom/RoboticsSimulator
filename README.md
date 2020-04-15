@@ -18,7 +18,7 @@ A driving simulator for the VEX Robotics Tower Takeover competition.
 2. To build it out to your device, open the **Build Settings** window, make sure the target platform is Android, and click **Build & Run**.
 
 ## License
-You can use this to practice driving. You may modify it (Pull Requests are encouraged!), distribute it (but only for free and in accordance to the terms below), and use it. If you distribute it, you must link back to this repository. You may not, however, publish this on any online marketplace, such as (but not limited to) the Oculus store. Essentially, you can share it with your friends and online communities, but don't try to sell (for free or not) a packaged version.
+All rights reserved. You may not use, sell, distribute, or modify this program without permission from the author.
 
 ---
 Developed by Eric Yoon, 2020 | 
