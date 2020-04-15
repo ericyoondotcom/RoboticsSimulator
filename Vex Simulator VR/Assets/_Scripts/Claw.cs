@@ -33,11 +33,11 @@ public class Claw : MonoBehaviour
             StartOpenClaw();
         }
 #else
-        if (Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > controllerTriggerThreshold && !closingClaw)
+        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > controllerTriggerThreshold && !closingClaw)
         {
             StartClosingClaw();
         }
-        else if (Input.GetAxis("Oculus_CrossPlatform_SecondaryHandTrigger") > controllerTriggerThreshold && closingClaw)
+        else if (OVRInput.Get(OVRInput.Button.One, OVRInput.Controller.RTouch) && closingClaw)
         {
             StartOpenClaw();
         }

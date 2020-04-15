@@ -21,7 +21,7 @@ public class LiftController : MonoBehaviour
 #if UNITY_EDITOR
         movement = Input.GetKey(KeyCode.Space) ? 1 : (Input.GetKey(KeyCode.LeftShift) ? -1 : 0);
 #else
-        movement = Input.GetAxis("Oculus_CrossPlatform_PrimaryIndexTrigger") - Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger");
+        movement = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) - (OVRInput.Get(OVRInput.Button.One, OVRInput.Controller.LTouch) ? 1 : 0);
 #endif
         liftPosition += movement * liftSpeed;
         if (liftPosition < 0) liftPosition = 0;
