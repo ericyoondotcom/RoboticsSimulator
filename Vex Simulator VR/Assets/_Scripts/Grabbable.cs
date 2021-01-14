@@ -21,7 +21,7 @@ public class Grabbable : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        outline.enabled = false;
+        if(outline) outline.enabled = false;
         isClosest = new Dictionary<Side, bool>()
         {
             {Side.Left, false },

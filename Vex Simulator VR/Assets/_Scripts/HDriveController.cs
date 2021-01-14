@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 using static Enums;
 
-public class RobotController : MonoBehaviour
+public class HDriveController : MonoBehaviour
 {
-    public List<WheelInfo> wheels;
+    public List<HDriveWheelInfo> wheels;
     public float maxMotorTorque;
 
     public void FixedUpdate()
@@ -25,7 +25,7 @@ public class RobotController : MonoBehaviour
         leftTorque *= maxMotorTorque;
         rightTorque *= maxMotorTorque;
 
-        foreach (WheelInfo wheelInfo in wheels)
+        foreach (HDriveWheelInfo wheelInfo in wheels)
         {
             wheelInfo.wheel.motorTorque = (wheelInfo.side == Side.Left) ? leftTorque : rightTorque;
             
@@ -34,7 +34,7 @@ public class RobotController : MonoBehaviour
 }
 
 [System.Serializable]
-public class WheelInfo
+public class HDriveWheelInfo
 {
     public WheelCollider wheel;
     public Side side;
