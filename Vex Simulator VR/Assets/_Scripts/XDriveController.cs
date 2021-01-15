@@ -54,6 +54,6 @@ public class XDriveController : MonoBehaviour
             wheelFR.brakeTorque = 0;
         }
 
-        print("FL: " + wheelFL.motorTorque + ", BL: " + wheelBL.motorTorque + ", BR: " + wheelBR.motorTorque + ", FR: " + wheelFR.motorTorque);
+        //print("FL: " + wheelFL.motorTorque + ", BL: " + wheelBL.motorTorque + ", BR: " + wheelBR.motorTorque + ", FR: " + wheelFR.motorTorque);
     }
 }
