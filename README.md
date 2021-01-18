@@ -15,7 +15,6 @@ A driving simulator for the VEX Robotics competition.
 
 ## Get Started with Development
 1. Install the right version of Unity and get it set up with Android Studio.
-2. As of 2021, the latest Blender and FBX robot CAD files are not available in the repository since they are too large. Please contact the developers for access to these files. **IMPORTANT!** _Before_ opening Unity, place the FBX file in the directory as `Vex Simulator VR/Assets/Models/Turbo/Turbo_export.fbx`.
 2. To build it out to your device, open the **Build Settings** window, make sure the target platform is Android, and click **Build & Run**.
 
 ## License

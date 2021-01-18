@@ -1,2 +1,4 @@
 Models/turbo_cleaned_up.blend
-Vex\ Simulator\ VR/Assets/Models/Turbo/Turbo_export.fbx
+# Vex\ Simulator\ VR/Assets/Models/Turbo/Turbo_export.fbx
+
+*.blend1
