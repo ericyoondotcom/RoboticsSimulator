@@ -18,7 +18,7 @@ A driving simulator for the VEX Robotics competition.
 2. To build it out to your device, open the **Build Settings** window, make sure the target platform is Android, and click **Build & Run**.
 
 ## License
-All rights reserved. You may not use, sell, distribute, or modify this program without permission from the author.
+This software is covered by the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html). If you choose to use this software as part of your VEX Robotics Competition endeavors, please credit Eric Yoon and Team 62X in your judges presentation. Thanks!
 
 ---
 Developed by Eric Yoon, 2020 | 
